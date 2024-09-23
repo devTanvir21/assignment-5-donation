@@ -10,73 +10,58 @@ btnDonation.addEventListener('click', function () {
 })
 // redirecting to the history page
 const btnHistory = document.getElementById('btn-history');
-btnHistory.addEventListener('click', function () {
-    window.location.href = './history.html';
-})
+// btnHistory.addEventListener('click', function () {
+//     window.location.href = './history.html';
+// })
 
-// // for calculating donation amount
+
+// for btn active/inactive
+btnDonation.addEventListener('click', function () {
+    btnDonation.classList.replace('bg-[#B4F461]', 'bg-white');
+    btnHistory.classList.replace('bg-white', 'bg-[#B4F461]');
+});
+
+btnHistory.addEventListener('click', function () {
+    btnHistory.classList.replace('bg-white', 'bg-[#B4F461]');
+    btnDonation.classList.replace('bg-[#B4F461]', 'bg-white');
+});
+
+
+// For calculating donation amount
 const amountInHand = document.getElementById('amount-in-hand');
 const amountInHandNumber = parseFloat(amountInHand.innerText);
 
+function handleDonation(amountId, inputId) {
+    const amount = document.getElementById(amountId);
+    const amountInNumber = parseFloat(amount.innerText);
 
+    const input = document.getElementById(inputId);
+    const inputInNumber = parseFloat(input.value);
+    if(inputInNumber !== 'number' || inputInNumber <= 0){
+        return alert('Invalid Input');
+    }
 
+    const updatedAmount = amountInNumber + inputInNumber;
+    amount.innerText = updatedAmount;
+
+    const newAmountInHand = parseFloat(amountInHand.innerText) - inputInNumber;
+    amountInHand.innerText = newAmountInHand;
+
+    input.value = '';
+
+}
 
 const btnNoakhali = document.getElementById('btn-noakhali');
-
 btnNoakhali.addEventListener('click', function () {
-    const amountNoakhali = document.getElementById('amount-noakhali');
-    const amountNoakhaliNumber = parseFloat(amountNoakhali.innerText);
-
-    const inputNoakhali = document.getElementById('input-noakhali');
-    const inputNoakhaliNumber = parseFloat(inputNoakhali.value);
-
-    const updatedAmountNoakhali = amountNoakhaliNumber + inputNoakhaliNumber;
-    amountNoakhali.innerText = updatedAmountNoakhali;
-
-    const newAmountInHand = parseFloat(amountInHand.innerText) - inputNoakhaliNumber;
-    amountInHand.innerText = newAmountInHand;
-
-    inputNoakhali.value = '';
+    handleDonation('amount-noakhali', 'input-noakhali');
 });
-
 
 const btnFeni = document.getElementById('btn-feni');
-
 btnFeni.addEventListener('click', function () {
-    const amountFeni = document.getElementById('amount-feni');
-    const amountFeniNumber = parseFloat(amountFeni.innerText);
-
-    const inputFeni = document.getElementById('input-feni');
-    const inputFeniNumber = parseFloat(inputFeni.value);
-
-    const updatedAmountFeni = amountFeniNumber + inputFeniNumber;
-    amountFeni.innerText = updatedAmountFeni;
-
-    const newAmountInHand = parseFloat(amountInHand.innerText) - inputFeniNumber;
-    amountInHand.innerText = newAmountInHand;
-
-    inputFeni.value = '';
-
+    handleDonation('amount-feni', 'input-feni');
 });
 
-
-
-
 const btnQuota = document.getElementById('btn-quota');
-
 btnQuota.addEventListener('click', function () {
-    const amountQuota = document.getElementById('amount-quota');
-    const amountQuotaNumber = parseFloat(amountQuota.innerText);
-
-    const inputQuota = document.getElementById('input-quota');
-    const inputQuotaNumber = parseFloat(inputQuota.value);
-
-    const updatedAmountQuota = amountQuotaNumber + inputQuotaNumber;
-    amountQuota.innerText = updatedAmountQuota;
-
-    const newAmountInHand = parseFloat(amountInHand.innerText) - inputQuotaNumber;
-    amountInHand.innerText = newAmountInHand;
-
-    inputQuota.value = '';
-
+    handleDonation('amount-quota', 'input-quota');
 });
