@@ -12,6 +12,8 @@
     <!-- daisyUI/cdn -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- font awesome -->
+    <script src="https://kit.fontawesome.com/43ba30917d.js" crossorigin="anonymous"></script>
     <!-- css for font -->
     <style>
         * {
@@ -43,39 +45,51 @@
                 </div>
             </div>
         </div>
-        <div class="mx-auto flex justify-center items-center gap-4 mt-20">
-            <button class="btn text-xl font-semibold px-8 py-3 bg-[#B4F461] border-none">Donation</button>
-            <button class="btn text-xl font-semibold px-8 py-3 border-none">History</button>
-        </div>
     </nav>
     <!-- Q&A section -->
-    <section class="accordion mx-auto max-w-5xl my-20">
-        <div class="collapse collapse-arrow bg-base-200">
-            <input type="radio" name="my-accordion-2" checked="checked" />
-            <div class="collapse-title text-xl font-medium">Click to open this one and close others</div>
-            <div class="collapse-content">
-                <p>hello</p>
+    <section class="mx-auto max-w-5xl my-20">
+        <h1 class="text-5xl font-bold text-left mb-12">Important FAQ <i class="fa-regular fa-circle-question"></i></h1>
+        <div class="accordion">
+            <div class="collapse collapse-arrow bg-base-200">
+                <input type="radio" name="my-accordion-2" checked="checked" />
+                <div class="collapse-title text-xl font-medium">What is the Document Object Model(DOM)?</div>
+                <div class="collapse-content">
+                    <p>The Document Object Model (DOM) is a programming interface for web documents. It represents the
+                        page so that programs can change the document structure, style, and content. The DOM represents
+                        the document as nodes and objects; that way, programming languages can interact with the page.
+                    </p>
+                </div>
             </div>
-        </div>
-        <div class="collapse collapse-arrow bg-base-200">
-            <input type="radio" name="my-accordion-2" />
-            <div class="collapse-title text-xl font-medium">Click to open this one and close others</div>
-            <div class="collapse-content">
-                <p>hello</p>
+            <div class="collapse collapse-arrow bg-base-200">
+                <input type="radio" name="my-accordion-2" />
+                <div class="collapse-title text-xl font-medium">How do you select an element from the DOM?</div>
+                <div class="collapse-content">
+                    <p>The getElementById() method of the Document interface returns an Element object representing the
+                        element whose id property matches the specified string. Since element IDs are required to be
+                        unique if specified, they're a useful way to get access to a specific element quickly.</p>
+                </div>
             </div>
-        </div>
-        <div class="collapse collapse-arrow bg-base-200">
-            <input type="radio" name="my-accordion-2" />
-            <div class="collapse-title text-xl font-medium">Click to open this one and close others</div>
-            <div class="collapse-content">
-                <p>hello</p>
+            <div class="collapse collapse-arrow bg-base-200">
+                <input type="radio" name="my-accordion-2" />
+                <div class="collapse-title text-xl font-medium">What is event delegation in the context of the DOM, and
+                    why is it useful?</div>
+                <div class="collapse-content">
+                    <p>Delegation is the act of redirecting tasks and initiatives to other team members. You might
+                        delegate work to distribute responsibility more evenly, or because the task or initiative is
+                        more relevant to another team member's priorities, skills, or interests. Knowing when and how to
+                        delegate makes you a better manager.</p>
+                </div>
             </div>
-        </div>
-        <div class="collapse collapse-arrow bg-base-200">
-            <input type="radio" name="my-accordion-2" />
-            <div class="collapse-title text-xl font-medium">Click to open this one and close others</div>
-            <div class="collapse-content">
-                <p>hello</p>
+            <div class="collapse collapse-arrow bg-base-200">
+                <input type="radio" name="my-accordion-2" />
+                <div class="collapse-title text-xl font-medium">How do you manipulate an element's attributes and styles
+                    using the DOM?</div>
+                <div class="collapse-content">
+                    <p>Changing an element's style (CSS) attributes is one of the ways in which the DOM can be used. For
+                        example, in the code below, the onfocus event handler method is used to change the input
+                        element's style when the user clicks inside it. When this event occurs, the element's background
+                        color will change to purple.</p>
+                </div>
             </div>
         </div>
     </section>
