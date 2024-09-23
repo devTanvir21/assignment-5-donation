@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+    <!-- lexend font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+    <!-- daisyUI/cdn -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- css for font -->
+    <style>
+        * {
+            font-family: "Lexend", sans-serif;
+            font-optical-sizing: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- nav -->
+    <nav class="sticky top-0">
+        <div class="bg-[#F9F7F3] pt-6 pb-16">
+            <div class="navbar max-w-[1140px] mx-auto">
+                <div class="navbar-start">
+                    <button class="btn text-xl font-semibold px-8 py-2 bg-[#B4F461] border-none">Blog</button>
+                </div>
+                <div class="navbar-center">
+                    <div class="flex items-center justify-center gap-3">
+                        <img src="assets/logo.png" alt="">
+                        <h2 class="text-xl font-semibold">Donate Bangladesh</h2>
+                    </div>
+                </div>
+                <div class="navbar-end">
+                    <div class="flex items-center justify-center gap-3">
+                        <img src="assets/coin.png" alt="">
+                        <h2 class="text-xl font-semibold"><span>5500</span> BDT</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="mx-auto flex justify-center items-center gap-4 mt-20">
+            <button class="btn text-xl font-semibold px-8 py-3 bg-[#B4F461] border-none">Donation</button>
+            <button class="btn text-xl font-semibold px-8 py-3 border-none">History</button>
+        </div>
+    </nav>
+    <!-- Q&A section -->
+    <section class="accordion mx-auto max-w-5xl my-20">
+        <div class="collapse collapse-arrow bg-base-200">
+            <input type="radio" name="my-accordion-2" checked="checked" />
+            <div class="collapse-title text-xl font-medium">Click to open this one and close others</div>
+            <div class="collapse-content">
+                <p>hello</p>
+            </div>
+        </div>
+        <div class="collapse collapse-arrow bg-base-200">
+            <input type="radio" name="my-accordion-2" />
+            <div class="collapse-title text-xl font-medium">Click to open this one and close others</div>
+            <div class="collapse-content">
+                <p>hello</p>
+            </div>
+        </div>
+        <div class="collapse collapse-arrow bg-base-200">
+            <input type="radio" name="my-accordion-2" />
+            <div class="collapse-title text-xl font-medium">Click to open this one and close others</div>
+            <div class="collapse-content">
+                <p>hello</p>
+            </div>
+        </div>
+        <div class="collapse collapse-arrow bg-base-200">
+            <input type="radio" name="my-accordion-2" />
+            <div class="collapse-title text-xl font-medium">Click to open this one and close others</div>
+            <div class="collapse-content">
+                <p>hello</p>
+            </div>
+        </div>
+    </section>
+    <!-- footer -->
+    <footer>
+        <div class="bg-[#F9F7F3] py-16">
+            <p class="text-[#F9F7F3]">footer</p>
+        </div>
+    </footer>
+</body>
+
+</html>
