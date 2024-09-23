@@ -3,20 +3,20 @@ const btnBlog = document.getElementById('btn-blog');
 btnBlog.addEventListener('click', function () {
     window.location.href = './blog.html';
 })
+// redirecting to the index/main page
+const btnDonation = document.getElementById('btn-donation');
+btnDonation.addEventListener('click', function () {
+    window.location.href = './index.html';
+})
+// redirecting to the history page
+const btnHistory = document.getElementById('btn-history');
+btnHistory.addEventListener('click', function () {
+    window.location.href = './history.html';
+})
 
 // // for calculating donation amount
 const amountInHand = document.getElementById('amount-in-hand');
 const amountInHandNumber = parseFloat(amountInHand.innerText);
-
-
-const amountFeni = parseFloat(document.getElementById('amount-feni').innerText);
-const amountQuota = parseFloat(document.getElementById('amount-quota').innerText);
-
-const inputFeni = parseFloat(document.getElementById('input-feni').value);
-const inputQuota = parseFloat(document.getElementById('input-quota').value);
-
-
-
 
 
 
