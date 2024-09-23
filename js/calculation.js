@@ -5,27 +5,78 @@ btnBlog.addEventListener('click', function () {
 })
 
 // // for calculating donation amount
-// let amountInHand = document.getElementById('amount-in-hand').innerText;
+const amountInHand = document.getElementById('amount-in-hand');
+const amountInHandNumber = parseFloat(amountInHand.innerText);
 
-// let amountNoakhali = document.getElementById('amount-noakhali').innerText;
-// let amountFeni = document.getElementById('amount-feni').innerText;
-// let amountQuota = document.getElementById('amount-quota').innerText;
 
-// let inputNoakhali = document.getElementById('input-noakhali').value;
-// let inputFeni = document.getElementById('input-feni').value;
-// let inputQuota = document.getElementById('input-quota').value;
+const amountFeni = parseFloat(document.getElementById('amount-feni').innerText);
+const amountQuota = parseFloat(document.getElementById('amount-quota').innerText);
 
-// let btnFeni = document.getElementById('btn-feni');
-// let btnQuota = document.getElementById('btn-quota');
+const inputFeni = parseFloat(document.getElementById('input-feni').value);
+const inputQuota = parseFloat(document.getElementById('input-quota').value);
 
-// const btnNoakhali = document.getElementById('btn-noakhali');
 
-// btnNoakhali.addEventListener('click', function () {
-//     console.log('noakhali');
 
-// });
+
+
+
 
 const btnNoakhali = document.getElementById('btn-noakhali');
-btnNoakhali.addEventListener('click', function(){
-    console.log('object');
-})
+
+btnNoakhali.addEventListener('click', function () {
+    const amountNoakhali = document.getElementById('amount-noakhali');
+    const amountNoakhaliNumber = parseFloat(amountNoakhali.innerText);
+
+    const inputNoakhali = document.getElementById('input-noakhali');
+    const inputNoakhaliNumber = parseFloat(inputNoakhali.value);
+
+    const updatedAmountNoakhali = amountNoakhaliNumber + inputNoakhaliNumber;
+    amountNoakhali.innerText = updatedAmountNoakhali;
+
+    const newAmountInHand = parseFloat(amountInHand.innerText) - inputNoakhaliNumber;
+    amountInHand.innerText = newAmountInHand;
+
+    inputNoakhali.value = '';
+});
+
+
+const btnFeni = document.getElementById('btn-feni');
+
+btnFeni.addEventListener('click', function () {
+    const amountFeni = document.getElementById('amount-feni');
+    const amountFeniNumber = parseFloat(amountFeni.innerText);
+
+    const inputFeni = document.getElementById('input-feni');
+    const inputFeniNumber = parseFloat(inputFeni.value);
+
+    const updatedAmountFeni = amountFeniNumber + inputFeniNumber;
+    amountFeni.innerText = updatedAmountFeni;
+
+    const newAmountInHand = parseFloat(amountInHand.innerText) - inputFeniNumber;
+    amountInHand.innerText = newAmountInHand;
+
+    inputFeni.value = '';
+
+});
+
+
+
+
+const btnQuota = document.getElementById('btn-quota');
+
+btnQuota.addEventListener('click', function () {
+    const amountQuota = document.getElementById('amount-quota');
+    const amountQuotaNumber = parseFloat(amountQuota.innerText);
+
+    const inputQuota = document.getElementById('input-quota');
+    const inputQuotaNumber = parseFloat(inputQuota.value);
+
+    const updatedAmountQuota = amountQuotaNumber + inputQuotaNumber;
+    amountQuota.innerText = updatedAmountQuota;
+
+    const newAmountInHand = parseFloat(amountInHand.innerText) - inputQuotaNumber;
+    amountInHand.innerText = newAmountInHand;
+
+    inputQuota.value = '';
+
+});
