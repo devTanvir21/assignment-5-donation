@@ -23,7 +23,7 @@
 
 <body class="">
     <!-- nav -->
-    <nav class="sticky top-0 z-50">
+    <nav class="sticky top-0 bg-white bg-opacity-40 backdrop-blur-md z-50">
         <div class="bg-[#F9F7F3] pt-6 pb-16 shadow">
             <div class="navbar max-w-[1140px] mx-auto flex-col md:flex-row gap-3 md:gap-0">
                 <div class="navbar-start">
@@ -45,14 +45,14 @@
             </div>
         </div>
         <div class="relative">
-            <div class="mx-auto flex justify-center items-center gap-4 py-20 absolute inset-0 bg-white bg-opacity-10 backdrop-blur-md z-10">
+            <div class="mx-auto flex justify-center items-center gap-4 pt-16 pb-10">
                 <button id="btn-donation" class="btn text-xl font-semibold px-8 py-3 bg-[#B4F461]">Donation</button>
                 <button id="btn-history" class="btn text-xl font-semibold px-8 py-3 bg-white">History</button>
             </div>
         </div>
     </nav>
     <!-- donation section -->
-    <section class="max-w-[1140px] mx-auto mb-20 mt-16 lg:mt-32 space-y-8">
+    <section id="donation-section" class="max-w-[1140px] mx-auto mb-20 space-y-8">
         <div class="flex flex-col lg:flex-row gap-8 p-8 border rounded-lg shadow">
             <img src="assets/noakhali.png" alt="">
             <div>
@@ -154,6 +154,12 @@
                     </div>
                 </dialog>
             </div>
+        </div>
+    </section>
+    <!-- history section -->
+    <section id="history-section" class="hidden">
+        <div id="history-container">
+            <h3>this is history</h3>
         </div>
     </section>
 
