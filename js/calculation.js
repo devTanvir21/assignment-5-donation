@@ -28,24 +28,24 @@ btnHistory.addEventListener('click', function () {
 
 
 // For calculating donation amount
-const amountInHand = document.getElementById('amount-in-hand');
-const amountInHandNumber = parseFloat(amountInHand.innerText);
+const amountInHand = document.getElementById('amount-in-hand').innrText;
+const amountInHandNumber = parseFloat(amountInHand);
 
 function handleDonation(amountId, inputId) {
-    const amount = document.getElementById(amountId);
-    const amountInNumber = parseFloat(amount.innerText);
+    const amount = document.getElementById(amountId).innerText;
+    const amountInNumber = parseFloat(amount);
 
     const input = document.getElementById(inputId);
     const inputInNumber = parseFloat(input.value);
     if(inputInNumber !== 'number' || inputInNumber <= 0){
-        return alert('Invalid Input');
+        return alert('Invalid Input! Please try a valid amount!!');
     }
 
     const updatedAmount = amountInNumber + inputInNumber;
-    amount.innerText = updatedAmount;
+    amount= updatedAmount;
 
     const newAmountInHand = parseFloat(amountInHand.innerText) - inputInNumber;
-    amountInHand.innerText = newAmountInHand;
+    amountInHand = newAmountInHand;
 
     input.value = '';
 
