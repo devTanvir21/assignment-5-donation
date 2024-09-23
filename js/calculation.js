@@ -1,7 +1,7 @@
 // redirecting to the blog page
 const btnBlog = document.getElementById('btn-blog');
 btnBlog.addEventListener('click', function () {
-    window.location.href = '/blog.html';
+    window.location.href = './blog.html';
 })
 
 // // for calculating donation amount
@@ -24,3 +24,8 @@ btnBlog.addEventListener('click', function () {
 //     console.log('noakhali');
 
 // });
+
+const btnNoakhali = document.getElementById('btn-noakhali');
+btnNoakhali.addEventListener('click', function(){
+    console.log('object');
+})
