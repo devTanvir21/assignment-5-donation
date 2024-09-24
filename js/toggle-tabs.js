@@ -4,7 +4,6 @@ btnBlog.addEventListener('click', function () {
     window.location.href = './blog.html';
 })
 
-
 const btnDonation = document.getElementById('btn-donation');
 const btnHistory = document.getElementById('btn-history');
 

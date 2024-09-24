@@ -23,12 +23,12 @@
 
 <body class="">
     <!-- nav -->
-    <nav class="sticky top-0 bg-white bg-opacity-40 backdrop-blur-md z-50">
+    <nav class="sticky top-0 bg-white bg-opacity-40 backdrop-blur-md z-50 shadow-sm">
         <div class="bg-[#F9F7F3] pt-6 pb-16 shadow">
             <div class="navbar max-w-[1140px] mx-auto flex-col md:flex-row gap-3 md:gap-0">
                 <div class="navbar-start">
                     <button id="btn-blog"
-                        class="btn text-xl font-semibold px-8 py-2 bg-[#B4F461] border-none">Blog</button>
+                        class="btn text-xl font-semibold px-8 bg-[#B4F461] border-none">Blog</button>
                 </div>
                 <div class="navbar-center">
                     <div class="flex items-center justify-center gap-3">
@@ -39,24 +39,24 @@
                 <div class="navbar-end justify-start md:justify-end">
                     <div class="flex items-center justify-center gap-3">
                         <img src="assets/coin.png" alt="">
-                        <h2 class="text-xl font-semibold"><span id="amount-in-hand">5500</span> BDT</h2>
+                        <h2 class="text-xl font-semibold"><span id="amount-in-hand">8700</span> BDT</h2>
                     </div>
                 </div>
             </div>
         </div>
         <div>
             <div class="mx-auto flex justify-center items-center gap-4 pt-16 pb-10">
-                <button id="btn-donation" class="btn text-xl font-semibold px-8 py-3 bg-[#B4F461]">Donation</button>
-                <button id="btn-history" class="btn text-xl font-semibold px-8 py-3 bg-white">History</button>
+                <button id="btn-donation" class="btn text-xl font-semibold px-8 bg-[#B4F461]">Donation</button>
+                <button id="btn-history" class="btn text-xl font-semibold px-8 bg-white">History</button>
             </div>
         </div>
     </nav>
     <!-- donation section -->
-    <section id="donation-section" class="max-w-[1140px] mx-auto mb-20 space-y-8">
+    <section id="donation-section" class="max-w-[1140px] mx-auto mb-20 px-1 pt-6 space-y-8">
         <div class="flex flex-col lg:flex-row gap-8 p-8 border rounded-lg shadow">
             <img src="./assets/noakhali.png" alt="" class="flex-1">
             <div class="flex-1">
-                <button class="btn px-3 py-2">
+                <button class="btn px-4 py-2">
                     <img src="./assets/coin.png" alt="noakhali-flood">
                     <span id="amount-noakhali">0</span> BDT
                 </button>
@@ -68,7 +68,7 @@
                     but access to affected areas remains challenging.</p>
                 <input id="input-noakhali" type="number" placeholder="Write Donation Amount"
                     class="input input-bordered w-full mt-6 mb-4" />
-                <button id="btn-noakhali" class="btn text-xl font-semibold w-full py-2 bg-[#B4F461] border-none">Donate Now</button>
+                <button id="btn-noakhali" class="btn text-xl font-semibold w-full bg-[#B4F461] border-none">Donate Now</button>
                 <!-- modal for successful donation -->
                 <dialog id="my_modal_1" class="modal">
                     <div class="modal-box flex flex-col justify-center items-center">
@@ -101,7 +101,7 @@
         <div class="flex flex-col lg:flex-row gap-8 p-8 border rounded-lg shadow">
             <img src="./assets/feni.png" alt="feni-flood" class="max-h-[390px] flex-1">
             <div class="flex-1">
-                <button class="btn px-3 py-2">
+                <button class="btn px-4 py-2">
                     <img src="./assets/coin.png" alt="">
                     <span id="amount-feni">600</span> BDT
                 </button>
@@ -113,14 +113,14 @@
                     underscores the need for improved drainage and disaster preparedness.</p>
                 <input id="input-feni" type="number" placeholder="Write Donation Amount"
                     class="input input-bordered w-full mt-6 mb-4" />
-                <button id="btn-feni" class="btn text-xl font-semibold w-full py-2 bg-[#B4F461] border-none">Donate
+                <button id="btn-feni" class="btn text-xl font-semibold w-full bg-[#B4F461] border-none">Donate
                     Now</button>
             </div>
         </div>
         <div class="flex flex-col lg:flex-row gap-8 p-8 border rounded-lg shadow">
             <img src="./assets/quota-protest.png" alt="quota-protest" class="max-h-[390px] flex-1">
             <div class="flex-1">
-                <button class="btn px-3 py-2">
+                <button class="btn px-4 py-2">
                     <img src="./assets/coin.png" alt="">
                     <span id="amount-quota">300</span> BDT
                 </button>
@@ -132,7 +132,7 @@
                     societal divisions.</p>
                 <input id="input-quota" type="number" placeholder="Write Donation Amount"
                     class="input input-bordered w-full mt-6 mb-4" />
-                <button id="btn-quota" class="btn text-xl font-semibold w-full py-2 bg-[#B4F461] border-none">Donate
+                <button id="btn-quota" class="btn text-xl font-semibold w-full bg-[#B4F461] border-none">Donate
                     Now</button>
             </div>
         </div>
