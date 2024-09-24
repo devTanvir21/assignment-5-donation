@@ -45,14 +45,15 @@ btnHistory.addEventListener('click', function () {
 const amountInHand = document.getElementById('amount-in-hand');
 const amountInHandNumber = parseFloat(amountInHand.innerText);
 
-function handleDonation(amountId, inputId) {
+
+function handleDonation(incident, amountId, inputId) {
     const amount = document.getElementById(amountId);
     const amountInNumber = parseFloat(amount.innerText);
 
     const input = document.getElementById(inputId);
     const inputInNumber = parseFloat(input.value);
 
-    if(inputInNumber <= 0){
+    if (inputInNumber <= 0) {
         return alert('Invalid Input! Please try a valid amount!!');
     }
 
@@ -64,19 +65,49 @@ function handleDonation(amountId, inputId) {
 
     input.value = '';
 
+
+    const headingNoakhali = document.getElementById('heading-noakhali').innerText;
+    const headingFeni = document.getElementById('heading-feni').innerText;
+    const headingQuota = document.getElementById('heading-quota').innerText;
+    let heading = '';
+    if (incident === 'btn-noakhali') {
+        heading = headingNoakhali
+    }
+    else if (incident === 'btn-feni') {
+        heading = headingFeni;
+    }
+    else {
+        heading = headingQuota;
+    }
+
+    const historyContainer = document.getElementById('history-container');
+    
+    const currentTime = new Date().toString();
+
+    const newHistory = document.createElement('div');
+    newHistory.innerHTML = `<div class="p-8 rounded-2xl border shadow-xl">
+            <p>
+                <span class="text-xl font-bold">${inputInNumber} Taka is Donated for ${heading}</span> 
+                <br>
+                Date: ${currentTime}
+            </p>
+    </div>`;
+    console.log(newHistory);
+    historyContainer.appendChild(newHistory);
+
 }
 
 const btnNoakhali = document.getElementById('btn-noakhali');
 btnNoakhali.addEventListener('click', function () {
-    handleDonation('amount-noakhali', 'input-noakhali');
+    handleDonation('btn-noakhali', 'amount-noakhali', 'input-noakhali');
 });
 
 const btnFeni = document.getElementById('btn-feni');
 btnFeni.addEventListener('click', function () {
-    handleDonation('amount-feni', 'input-feni');
+    handleDonation('btn-feni', 'amount-feni', 'input-feni');
 });
 
 const btnQuota = document.getElementById('btn-quota');
 btnQuota.addEventListener('click', function () {
-    handleDonation('amount-quota', 'input-quota');
+    handleDonation('btn-quota', 'amount-quota', 'input-quota');
 });
