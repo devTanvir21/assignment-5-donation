@@ -1,46 +1,3 @@
-// redirecting to the blog page
-const btnBlog = document.getElementById('btn-blog');
-btnBlog.addEventListener('click', function () {
-    window.location.href = './blog.html';
-})
-
-
-const btnDonation = document.getElementById('btn-donation');
-const btnHistory = document.getElementById('btn-history');
-
-const donationSection = document.getElementById('donation-section');
-const historySection = document.getElementById('history-section');
-
-
-// for btn active/inactive && class hidden
-btnDonation.addEventListener('click', function () {
-    if (btnDonation.classList.contains('bg-white')) {
-        btnDonation.classList.replace('bg-white', 'bg-[#B4F461]');
-        btnHistory.classList.replace('bg-[#B4F461]', 'bg-white');
-    } else {
-        btnDonation.classList.replace('bg-[#B4F461]', 'bg-white');
-        btnHistory.classList.replace('bg-white', 'bg-[#B4F461]');
-    }
-
-    donationSection.classList.remove('hidden');
-    historySection.classList.add('hidden');
-
-});
-
-btnHistory.addEventListener('click', function () {
-    if (btnHistory.classList.contains('bg-white')) {
-        btnHistory.classList.replace('bg-white', 'bg-[#B4F461]');
-        btnDonation.classList.replace('bg-[#B4F461]', 'bg-white');
-    } else {
-        btnHistory.classList.replace('bg-[#B4F461]', 'bg-white');
-        btnDonation.classList.replace('bg-white', 'bg-[#B4F461]');
-    }
-
-    donationSection.classList.add('hidden');
-    historySection.classList.remove('hidden');
-});
-
-
 // For calculating donation amount
 const amountInHand = document.getElementById('amount-in-hand');
 const amountInHandNumber = parseFloat(amountInHand.innerText);
@@ -54,18 +11,26 @@ function handleDonation(incident, amountId, inputId) {
     const inputInNumber = parseFloat(input.value);
 
     if (inputInNumber <= 0) {
-        return alert('Invalid Input! Please try a valid amount!!');
+        input.value = '';
+        const failedModal = document.getElementById('my_modal_2');
+        return failedModal.showModal();
     }
 
     const updatedAmount = amountInNumber + inputInNumber;
     amount.innerText = updatedAmount;
 
     const newAmountInHand = parseFloat(amountInHand.innerText) - inputInNumber;
+    if (newAmountInHand < 0) {
+        return alert('Not enough balance');
+    }
     amountInHand.innerText = newAmountInHand;
 
     input.value = '';
 
+    // for modal
+    const modal = document.getElementById('my_modal_1').showModal();
 
+    // for history
     const headingNoakhali = document.getElementById('heading-noakhali').innerText;
     const headingFeni = document.getElementById('heading-feni').innerText;
     const headingQuota = document.getElementById('heading-quota').innerText;
@@ -81,7 +46,6 @@ function handleDonation(incident, amountId, inputId) {
     }
 
     const historyContainer = document.getElementById('history-container');
-    
     const currentTime = new Date().toString();
 
     const newHistory = document.createElement('div');
@@ -92,7 +56,6 @@ function handleDonation(incident, amountId, inputId) {
                 Date: ${currentTime}
             </p>
     </div>`;
-    console.log(newHistory);
     historyContainer.appendChild(newHistory);
 
 }
