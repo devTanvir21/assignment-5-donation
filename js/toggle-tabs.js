@@ -15,7 +15,8 @@ function changeSection(currentButton, previousButton, currentSection, previousSe
     if (currentButton.classList.contains('bg-white')) {
         currentButton.classList.replace('bg-white', 'bg-[#B4F461]');
         previousButton.classList.replace('bg-[#B4F461]', 'bg-white');
-    } else {
+    } 
+    else {
         currentButton.classList.replace('bg-[#B4F461]', 'bg-white');
         previousButton.classList.replace('bg-white', 'bg-[#B4F461]');
     }
