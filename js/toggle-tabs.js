@@ -11,30 +11,22 @@ const donationSection = document.getElementById('donation-section');
 const historySection = document.getElementById('history-section');
 
 
-// for btn active/inactive && class hidden
-btnDonation.addEventListener('click', function () {
-    if (btnDonation.classList.contains('bg-white')) {
-        btnDonation.classList.replace('bg-white', 'bg-[#B4F461]');
-        btnHistory.classList.replace('bg-[#B4F461]', 'bg-white');
+function changeSection(currentButton, previousButton, currentSection, previousSection) {
+    if (currentButton.classList.contains('bg-white')) {
+        currentButton.classList.replace('bg-white', 'bg-[#B4F461]');
+        previousButton.classList.replace('bg-[#B4F461]', 'bg-white');
     } else {
-        btnDonation.classList.replace('bg-[#B4F461]', 'bg-white');
-        btnHistory.classList.replace('bg-white', 'bg-[#B4F461]');
+        currentButton.classList.replace('bg-[#B4F461]', 'bg-white');
+        previousButton.classList.replace('bg-white', 'bg-[#B4F461]');
     }
+    currentSection.classList.remove('hidden');
+    previousSection.classList.add('hidden');
+}
 
-    donationSection.classList.remove('hidden');
-    historySection.classList.add('hidden');
-
+btnDonation.addEventListener('click', function () {
+    changeSection(btnDonation, btnHistory, donationSection, historySection);
 });
 
 btnHistory.addEventListener('click', function () {
-    if (btnHistory.classList.contains('bg-white')) {
-        btnHistory.classList.replace('bg-white', 'bg-[#B4F461]');
-        btnDonation.classList.replace('bg-[#B4F461]', 'bg-white');
-    } else {
-        btnHistory.classList.replace('bg-[#B4F461]', 'bg-white');
-        btnDonation.classList.replace('bg-white', 'bg-[#B4F461]');
-    }
-
-    donationSection.classList.add('hidden');
-    historySection.classList.remove('hidden');
+    changeSection(btnHistory, btnDonation, historySection, donationSection);
 });

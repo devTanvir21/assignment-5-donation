@@ -11,7 +11,7 @@ function handleDonation(incident, amountId, inputId) {
     const inputInNumber = parseFloat(input.value);
     
 
-    if (inputInNumber <= 0) {
+    if (inputInNumber <= 0 || input.value === '' || input.value === '-' || input.value === '+') {
         input.value = '';
         const failedModal = document.getElementById('my_modal_2');
         return failedModal.showModal();
@@ -22,7 +22,11 @@ function handleDonation(incident, amountId, inputId) {
 
     const newAmountInHand = parseFloat(amountInHand.innerText) - inputInNumber;
     if (newAmountInHand < 0) {
-        return alert('Not enough balance');
+        // input.value = '';
+        // return alert('Not enough balance');
+        input.value = '';
+        const notEnoughBalanceModal = document.getElementById('my_modal_3');
+        return notEnoughBalanceModal.showModal();
     }
     amountInHand.innerText = newAmountInHand;
 
