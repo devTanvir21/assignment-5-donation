@@ -55,9 +55,15 @@
                 <input type="radio" name="my-accordion-2" checked="checked" />
                 <div class="collapse-title text-xl font-medium">What is the Document Object Model(DOM)?</div>
                 <div class="collapse-content">
-                    <p>The Document Object Model (DOM) is a programming interface for web documents. It represents the
-                        page so that programs can change the document structure, style, and content. The DOM represents
-                        the document as nodes and objects; that way, programming languages can interact with the page.
+                    <p>The Document Object Model (DOM) is a programming interface for HTML and XML documents. It
+                        represents the structure of a document as a tree-like object, with each element in the document
+                        represented as a node in the tree.
+                        The DOM allows developers to access and modify the content and structure of a document using
+                        programming languages such as JavaScript. For example, you can use the DOM to change the text of
+                        an element, add or remove elements from the document, or change the style of an element.
+                        The DOM is an important part of web development, as it allows developers to create dynamic and
+                        interactive web pages. It is supported by all modern web browsers, and it is an essential tool
+                        for building web-based applications and services.
                     </p>
                 </div>
             </div>
@@ -65,9 +71,21 @@
                 <input type="radio" name="my-accordion-2" />
                 <div class="collapse-title text-xl font-medium">How do you select an element from the DOM?</div>
                 <div class="collapse-content">
-                    <p>The getElementById() method of the Document interface returns an Element object representing the
-                        element whose id property matches the specified string. Since element IDs are required to be
-                        unique if specified, they're a useful way to get access to a specific element quickly.</p>
+                    <p>To interact with elements in the Document Object Model (DOM), you need to select them
+                        effectively. The DOM represents the structure of a web page, allowing you to manipulate content,
+                        styles, and structure dynamically. JavaScript provides several methods for selecting elements,
+                        each suited for different scenarios. <br>
+                        1. <strong>getElementById(id)</strong>: Selects an element by its unique ID. <br>
+                        2. <strong>getElementsByClassName(className)</strong>: Selects elements with the specified class
+                        name (returns a live HTMLCollection). <br>
+                        3. <strong>getElementsByTagName(tagName)</strong>: Selects elements by their tag name (returns a
+                        live HTMLCollection). <br>
+                        4. <strong>querySelector(selector)</strong>: Selects the first element that matches the
+                        specified CSS selector. <br>
+                        5. <strong>querySelectorAll(selector)</strong>: Selects all elements that match the specified
+                        CSS selector (returns a static NodeList). <br>
+                        These methods provide a range of options for selecting single or multiple elements in the DOM.
+                    </p>
                 </div>
             </div>
             <div class="collapse collapse-arrow bg-base-200">
@@ -78,7 +96,12 @@
                     <p>Delegation is the act of redirecting tasks and initiatives to other team members. You might
                         delegate work to distribute responsibility more evenly, or because the task or initiative is
                         more relevant to another team member's priorities, skills, or interests. Knowing when and how to
-                        delegate makes you a better manager.</p>
+                        delegate makes you a better manager. <br>
+                        <strong>Benefits: </strong>The main benefit of delegate event listeners is that you don't need
+                        to bind and unbind event listeners when the DOM changes. With addEventListener, you need to
+                        register a new event listener whenever an a gets added to the DOM. With event delegation, you
+                        set it once and can forget about it.
+                    </p>
                 </div>
             </div>
             <div class="collapse collapse-arrow bg-base-200">
@@ -86,10 +109,20 @@
                 <div class="collapse-title text-xl font-medium">How do you manipulate an element's attributes and styles
                     using the DOM?</div>
                 <div class="collapse-content">
-                    <p>Changing an element's style (CSS) attributes is one of the ways in which the DOM can be used. For
-                        example, in the code below, the onfocus event handler method is used to change the input
-                        element's style when the user clicks inside it. When this event occurs, the element's background
-                        color will change to purple.</p>
+                    <p>We can manipulate an element's attributes and styles in the DOM using the following methods: <br>
+
+                        <strong>Attributes</strong> <br>
+                        <strong>setAttribute(name, value)</strong>: Sets an attribute's value. <br>
+                        <strong>getAttribute(name)</strong>: Retrieves an attribute's value. <br>
+                        <strong>removeAttribute(name)</strong>: Removes an attribute. <br>
+                        <strong>Direct access</strong>: Use properties like <strong>element.id</strong> or
+                        <strong>element.className</strong>. <br>
+                        <strong>Styles</strong> <br>
+                        <strong>style.property</strong>: Directly modifies CSS properties (e.g.,
+                        <strong>element.style.color = 'red'</strong>;). <br>
+                        <strong>classList</strong>: Manages classes with methods like <strong>add()</strong>, <strong>remove()</strong>, and <strong>toggle()</strong>. <br>
+                        These methods allow for dynamic updates to elements in a web page.
+                    </p>
                 </div>
             </div>
         </div>

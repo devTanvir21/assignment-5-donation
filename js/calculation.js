@@ -9,6 +9,7 @@ function handleDonation(incident, amountId, inputId) {
 
     const input = document.getElementById(inputId);
     const inputInNumber = parseFloat(input.value);
+    
 
     if (inputInNumber <= 0) {
         input.value = '';
